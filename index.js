@@ -108,8 +108,9 @@ app.post('/api/users/:id/exercises', async (req, res) => {
 
   // res.json(newExercise)
   const formDate = new Date(newExercise.date).toDateString()
-  // res.json({_id: newExercise._id, username: newExercise.username, date: newExercise.date, duration: newExercise.duration, description: newExercise.description})
-  res.json({_id: newExercise._id, username: newExercise.username, date: formDate, duration: newExercise.duration, description: newExercise.description})
+
+  // res.json({_id: newExercise._id, username: newExercise.username, date: formDate, duration: newExercise.duration, description: newExercise.description})
+  res.json({_id: id, username: newExercise.username, date: formDate, duration: newExercise.duration, description: newExercise.description})
 })
 
 
