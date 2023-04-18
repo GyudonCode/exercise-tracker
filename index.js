@@ -67,7 +67,7 @@ app.post('/api/users', async (req, res) => {
 //route that returns all users created and the id's
 app.get('/api/users', async (req, res) => {
     const users = await UserModel.find().select('-__v').exec()
-    res.json([users])
+    res.json(users)
 })
 
 
